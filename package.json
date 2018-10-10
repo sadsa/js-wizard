@@ -1,0 +1,23 @@
+{
+  "name": "js-wizard",
+  "version": "1.0.0",
+  "description": "A simple Wizard built entirely with Vanilla JS",
+  "main": "scripts/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "http-server -o"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sadsa/js-wizard.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sadsa/js-wizard/issues"
+  },
+  "homepage": "https://github.com/sadsa/js-wizard#readme",
+  "dependencies": {
+    "http-server": "^0.11.1"
+  }
+}
