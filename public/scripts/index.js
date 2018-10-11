@@ -43,25 +43,16 @@ var myWindow = {};
 
         this._backButton = new button();
         this._backButton.addClickListener(function () {
-            for (var i = 0; i < self._pages.length; i++) {
-                self._pages[i].hide();                
-            }
-
             self._currentPosition--;
             self._currentPosition = Math.max(self._currentPosition, 0);
-            self._pages[self._currentPosition].show();
+            self._movePage();
         });
 
         this._nextButton = new button();
         this._nextButton.addClickListener(function () {
-
-            for (var i = 0; i < self._pages.length; i++) {
-                self._pages[i].hide();                
-            }
-
             self._currentPosition++;
             self._currentPosition = Math.min(self._currentPosition, self._pages.length - 1);
-            self._pages[self._currentPosition].show();
+            self._movePage();
         });
 
         document.getElementById(backButtonId).addEventListener('click', function () {
@@ -73,16 +64,15 @@ var myWindow = {};
         });
     };
 
+    wizard.prototype._movePage = function() {
+        for (var i = 0; i < this._pages.length; i++) {
+            this._pages[i].hide();                
+        }
+        this._pages[this._currentPosition].show();
+    };
+
     wizard.prototype.addPage = function(pageId) {
         this._pages.push(new page(pageId));
-    };
-
-    wizard.prototype.next = function () {
-
-    };
-
-    wizard.prototype.back = function () {
-
     };
 
     w.Wizard = wizard;
