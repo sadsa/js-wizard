@@ -15,3 +15,11 @@ Create a simple wizard component that allows the user to steps through pages of 
 ## Mockup
 
 ![Mockup](https://github.com/sadsa/js-wizard/blob/master/mockup.png)
+
+
+## How to use
+
+Firstly you will need to run the following command, this will install packages required for the wizard.
+```
+npm install
+```
